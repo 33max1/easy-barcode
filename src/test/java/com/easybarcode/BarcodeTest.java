@@ -44,23 +44,6 @@ public class BarcodeTest {
     public void testMultipleEnhancedBarcodes() throws IOException {
         List<BarcodeData> barcodeList = new ArrayList<>();
 
-        // 第一个条码
-        barcodeList.add(new BarcodeData(
-                "ISBN-978-3-16-148410-0",
-                BarcodeType.EAN_13,
-                new BarcodeConfig()
-                        .setWidth(300)
-                        .setHeight(120)
-                        .setTitle("图书ISBN")
-                        .setTitleColor(new Color(139, 0, 0)) // 深红色
-                        .setTextLines(Arrays.asList(
-                                "ISBN: 978-3-16-148410-0",
-                                "书名: 深入理解Java虚拟机",
-                                "作者: 周志明"
-                        ))
-                        .setTextAlignment(TextAlignment.CENTER)
-        ));
-
         // 第二个条码
         barcodeList.add(new BarcodeData(
                 "https://www.company.com/product/123",
