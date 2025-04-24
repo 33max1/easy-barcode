@@ -75,6 +75,7 @@ public class BarcodeExporter {
             // 添加标题（如果存在）
             if (config.getTitle() != null && !config.getTitle().isEmpty()) {
                 Paragraph title = new Paragraph(config.getTitle())
+                        .setFont(BarcodeUtil.getDefaultChineseFont()) // 使用中文字体
                         .setFontColor(BarcodeUtil.awtToPdfColor(config.getTitleColor()))
                         .setFontSize(config.getTitleSize())
                         .setTextAlignment(config.getTextAlignment())
@@ -101,6 +102,7 @@ public class BarcodeExporter {
             if (config.isShowText() && config.getTextLines() != null && !config.getTextLines().isEmpty()) {
                 for (String text : config.getTextLines()) {
                     Paragraph textParagraph = new Paragraph(text)
+                            .setFont(BarcodeUtil.getDefaultChineseFont()) // 使用中文字体
                             .setFontColor(BarcodeUtil.awtToPdfColor(config.getTextColor()))
                             .setFontSize(config.getTextSize())
                             .setTextAlignment(config.getTextAlignment())

@@ -4,29 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b672cf9-0cd2-4c8d-aa28-8a40e0ba8e56" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/exception/BarcodeExportException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/util/BarcodeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/easybarcode/BarcodeTest.java" afterDir="false" />
+    <list default="true" id="2b672cf9-0cd2-4c8d-aa28-8a40e0ba8e56" name="Changes" comment="条码导出工具包">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/SourceHanSerifCN-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/core/BarcodeExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/easybarcode/util/BarcodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/easybarcode/util/BarcodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/easybarcode/BarcodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/easybarcode/BarcodeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -47,10 +38,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/easybarcode/easybarcode/src/main/resources/fonts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,7 +54,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\easybarcode\easybarcode\src\main\resources\fonts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BarcodeTest.testEnhancedBarcode">
     <configuration name="BarcodeTest.testEnhancedBarcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="easybarcode" />
       <extension name="coverage">
@@ -80,13 +76,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BarcodeTest.testMultipleEnhancedBarcodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easybarcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easybarcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.easybarcode" />
+      <option name="MAIN_CLASS_NAME" value="com.easybarcode.BarcodeTest" />
+      <option name="METHOD_NAME" value="testMultipleEnhancedBarcodes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BarcodeTest.testEnhancedBarcode" />
+        <item itemvalue="JUnit.BarcodeTest.testMultipleEnhancedBarcodes" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2b672cf9-0cd2-4c8d-aa28-8a40e0ba8e56" name="Changes" comment="" />
@@ -94,8 +110,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745477272115</updated>
-      <workItem from="1745477273416" duration="3127000" />
+      <workItem from="1745477273416" duration="5945000" />
     </task>
+    <task id="LOCAL-00001" summary="条码导出工具包">
+      <created>1745480623153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745480623153</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="条码导出工具包" />
+    <option name="LAST_COMMIT_MESSAGE" value="条码导出工具包" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

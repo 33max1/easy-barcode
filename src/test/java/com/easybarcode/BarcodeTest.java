@@ -20,7 +20,7 @@ public class BarcodeTest {
                 BarcodeType.CODE_128,
                 new BarcodeConfig()
                         .setWidth(300)
-                        .setHeight(100)
+                        .setHeight(50)
                         .setTitle("产品条码") // 条码上方标题
                         .setTitleSize(16)
                         .setTitleColor(new Color(0, 0, 139)) // 深蓝色标题
