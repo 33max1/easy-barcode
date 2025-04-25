@@ -26,6 +26,8 @@ public class BarcodeConfig {
     private float marginRight = 10f; // 右边距
     private TextAlignment textAlignment = TextAlignment.CENTER; // 文本对齐方式
 
+    private BarcodeLayout layout = new BarcodeLayout(); // 默认占满整行
+
     // 构造函数、getter和setter方法
 
     public BarcodeConfig() {
@@ -36,6 +38,14 @@ public class BarcodeConfig {
         this.height = height;
     }
 
+    public BarcodeLayout getLayout() {
+        return layout;
+    }
+
+    public BarcodeConfig setLayout(BarcodeLayout layout) {
+        this.layout = layout;
+        return this;
+    }
 
     public List<String> getTextLines() {
         return textLines;

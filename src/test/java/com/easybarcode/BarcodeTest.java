@@ -81,4 +81,33 @@ public class BarcodeTest {
         // 导出到PDF
         BarcodeExporter.exportToPdf("multiple_enhanced_barcodes.pdf", barcodeList);
     }
+
+    @Test
+    public void testComplexLayout() throws IOException {
+        List<BarcodeData> barcodeList = new ArrayList<>();
+
+        // 标题行（占满8栏）
+        barcodeList.add(createBarcodeData("esp-01","仓库管理系统", BarcodeType.CODE_39, 8, 0, true));
+
+        // 第一行：1-3-4布局
+        barcodeList.add(createBarcodeData("esp-01","区域A", BarcodeType.CODE_128, 1, 0, false));
+        barcodeList.add(createBarcodeData("esp-02","货架B-05", BarcodeType.CODE_128, 3, 0, false));
+        barcodeList.add(createBarcodeData("esp-03","2023-05-15", BarcodeType.CODE_128, 4, 0, false));
+
+        // 第二行：偏移2栏，占4栏
+        barcodeList.add(createBarcodeData("esp-05","扫描查询", BarcodeType.QR_CODE, 4, 2, true));
+
+        // 导出到PDF
+        BarcodeExporter.exportToPdf("complex_layout.pdf", barcodeList);
+    }
+
+    private BarcodeData createBarcodeData(String content, String text, BarcodeType type, int span, int offset, boolean newRow) {
+        return new BarcodeData(
+                content.replaceAll("\\s", "-"), // 用-替换空格作为条码内容
+                type,
+                new BarcodeConfig()
+                        .setLayout(new BarcodeLayout(span, offset, newRow))
+                        .setTextLines(Arrays.asList(text))
+        );
+    }
 }

@@ -23,6 +23,9 @@ import java.util.List;
  * 条码PDF导出器（增强版）
  */
 public class BarcodeExporter {
+    // 添加布局相关常量
+    private static final float TOTAL_WIDTH = 520f; // PDF页面总宽度
+    private static final float COLUMN_WIDTH = TOTAL_WIDTH / 8f; // 每栏宽度
 
     /**
      * 导出单个条码到PDF文件
@@ -64,13 +67,20 @@ public class BarcodeExporter {
     private static void addBarcodeToDocument(Document document, BarcodeData data) throws IOException {
         try {
             BarcodeConfig config = data.getConfig();
+            BarcodeLayout layout = config.getLayout();
 
             // 创建容器div
-            Div container = new Div()
-                    .setMarginTop(config.getMarginTop())
-                    .setMarginBottom(config.getMarginBottom())
-                    .setMarginLeft(config.getMarginLeft())
-                    .setMarginRight(config.getMarginRight());
+            // 创建容器div
+            Div container = new Div();
+
+            // 设置布局
+            float width = COLUMN_WIDTH * layout.getSpan();
+            float offset = COLUMN_WIDTH * layout.getOffset();
+
+            container.setWidth(width)
+                    .setMarginLeft(offset)
+                    .setMarginTop(layout.isNewRow() ? 10f : 0f)
+                    .setMarginBottom(10f);
 
             // 添加标题（如果存在）
             if (config.getTitle() != null && !config.getTitle().isEmpty()) {
